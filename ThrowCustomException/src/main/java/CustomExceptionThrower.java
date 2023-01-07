@@ -7,8 +7,18 @@ public class CustomExceptionThrower {
      * exceptions could provide valuable information for when something goes wrong in the application.
      *
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
+     * @throws CustomException
      */
-    public void throwCustomException(){
+    public void throwCustomException() throws CustomException{
+        int numer = 12;
+        int denom = 0;
+
+            if (denom == 0){
+                throw new CustomException("Divided by zero");
+            }
+            else{
+                int quotient = (numer/denom);  
+            }
 
     }
 

@@ -1,5 +1,9 @@
 package com.revature;
 
+import org.h2.engine.User;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import io.javalin.Javalin;
 
 /**
@@ -17,6 +21,12 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/problem1", ctx -> {
+            String JsonString = ctx.body();
+
+            ObjectMapper om = new ObjectMapper();
+            User user = om.readValue(JsonString, User.class);
+
+            ctx.contentType("application/problem1"); 
                 //implement logic here
         });
 

@@ -5,6 +5,19 @@ public class ReturnWordCount {
      * @return return the amount of words in a string.
      */
     public int count(String in){
-        return 0;
+        int inc = 2;
+        String temp = in;
+        boolean finished = false;
+        while(finished == false){
+        
+            if (temp.contains(" ")){
+                temp = temp.replaceFirst(" ", "");
+                inc++;
+            }
+            else{
+                finished = true;
+            } 
+    }
+        return inc;
     }
 }
